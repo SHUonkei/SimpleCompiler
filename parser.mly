@@ -8,7 +8,7 @@ open Ast
 /* File parser.mly */
 %token <int> NUM
 %token <string> STR ID
-%token INT IF WHILE SPRINT IPRINT SCAN EQ NEQ GT LT GE LE ELSE RETURN NEW DO
+%token INT IF WHILE SPRINT IPRINT SCAN EQ NEQ GT LT GE LE ELSE RETURN NEW DO FOR DOUBLE_DOT
 %token PLUS MINUS TIMES DIV LB RB LS RS LP RP ASSIGN PLUS_ASSIGN SEMI COMMA TYPE VOID MOD POW INCRIMENT
 %type <Ast.stmt> prog
 
@@ -74,6 +74,7 @@ stmt : ID ASSIGN expr SEMI    { Assign (Var $1, $3) }
      | IF LP cond RP stmt     { If ($3, $5, None) }
      | IF LP cond RP stmt ELSE stmt { If ($3, $5, Some $7) }
      | WHILE LP cond RP stmt  { While ($3, $5) }
+     | FOR LP ID ASSIGN expr DOUBLE_DOT expr RP stmt { Block ([VarDec (IntTyp, $3)], [While (CallFunc ("<=", [VarExp (Var $3); $7]), Block ([], [$9; Assign (Var $3, CallFunc ("+", [VarExp (Var $3); IntExp 1]))]))]) }
      | DO block WHILE LP cond RP SEMI { While ($5, $2) }
      | SPRINT LP STR RP SEMI  { CallProc ("sprint", [StrExp $3]) }
      | IPRINT LP expr RP SEMI { CallProc ("iprint", [$3]) }

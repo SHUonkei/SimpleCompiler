@@ -1,4 +1,5 @@
 {       
+        // 2-2
 	int c = 1;
         sprint ("int c = 1\n");
         iprint (c);

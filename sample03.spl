@@ -1,0 +1,8 @@
+{       
+    // 2-7
+	int x, rlt;
+    rlt = 1;
+    for (x = 0..5)
+        rlt = rlt * 3;
+    iprint(rlt);
+}
