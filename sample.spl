@@ -1,0 +1,59 @@
+{       
+	int a, b, m, n, r, mod, pow, inc, inc2, plusassign;
+        // comment 
+        sprint ("You must give 2 integers.\n");
+        sprint ("First integer: ");
+        scan  (a);
+        sprint ("Second integer: ");
+        scan (b);
+        m = a; n = b;
+        r = m - (m / n) * n;
+        m = n;
+        n = r;
+	while (r > 0) {
+                r = m - (m / n) * n;
+
+                m = n;
+                n = r;
+	}
+        mod = a % b;
+        pow = a ^ b;
+        sprint ("Answer = ");
+        iprint (m);
+        sprint ("\n");
+        sprint ("mod = ");
+        iprint (mod);
+        sprint ("\n");
+        sprint ("pow = ");
+        iprint (pow);
+        sprint ("\n");
+        inc = a++;
+        sprint ("increment once\n");
+        iprint (a);
+        sprint ("\n");
+        iprint (inc);
+        sprint ("\n");
+        inc = a++;
+        sprint ("increment twice\n");
+        iprint (a);
+        sprint ("\n");
+        iprint (inc);
+        sprint ("\n");
+        plusassign = a;
+        sprint ("before plus \n");
+        iprint (plusassign);
+        sprint ("\n");
+        plusassign += 3;
+        sprint ("before plus 3\n");
+        iprint (plusassign);
+        sprint ("\n");
+        a = 0;
+        do {
+                inc = a++;
+                sprint ("incremented\n");
+                iprint (a);
+                sprint ("\n");
+        } while (a < 5);
+}
+
+
