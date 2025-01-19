@@ -1,6 +1,16 @@
 # SimpleCompiler
 実践コンパイラ構成法 (電子通信情報系コアテキストシリーズ)の、コードを参考に、OcamlでSimple言語を拡張したもののコンパイラを実装
 
+```bash
+make
+./simc sample.spl
+```
+
+破棄.
+```bash
+make clean
+```
+
 ```
 .
 ├── Makefile
