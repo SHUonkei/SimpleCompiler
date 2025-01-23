@@ -1,0 +1,30 @@
+{
+	int a, b, m, n, r, mod, pow;
+
+        sprint ("You must give 2 integers.\n");
+        sprint ("First integer: ");
+        scan  (a);
+        sprint ("Second integer: ");
+        scan (b);
+        m = a; n = b;
+        r = m - (m / n) * n;
+        m = n;
+        n = r;
+	while (r > 0) {
+                r = m - (m / n) * n;
+
+                m = n;
+                n = r;
+	}
+        mod = a % b;
+        sprint ("Answer = ");
+        iprint (mod) ;
+        sprint ("\n");
+
+        pow = a ^ b;
+        sprint ("pow = ");
+        iprint (pow);
+        sprint ("\n");
+}
+
+
