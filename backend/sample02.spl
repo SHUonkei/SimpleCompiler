@@ -1,0 +1,23 @@
+{
+        // 2-2
+        int c = 100;
+        int a = 1;
+        sprint ("int c = 100\n");
+        c++;
+        iprint (c);
+        a = c++;
+        sprint ("\n");
+        iprint (a);
+        sprint ("\n");
+        {
+                int e;
+                e = 10;
+                iprint (e);
+                sprint("\n");
+
+        }
+        // iprint (d);
+        // sprint("\n");
+        iprint (c);
+        sprint ("\n");
+}

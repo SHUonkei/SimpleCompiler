@@ -1,7 +1,7 @@
-{       
+{
 	int a, b, m, n, r, mod, pow, inc, inc2, plusassign;
         // 1-1
-        // comment 
+        // comment
         sprint ("You must give 2 integers.\n");
         sprint ("First integer: ");
         scan  (a);
@@ -25,13 +25,13 @@
         sprint ("mod = ");
         iprint (mod);
         sprint ("\n");
-        
+
         // 2-3
         pow = a ^ b;
         sprint ("pow = ");
         iprint (pow);
         sprint ("\n");
-        
+
         // 2-4
         inc = a++;
         sprint ("increment once\n");
@@ -45,7 +45,7 @@
         sprint ("\n");
         iprint (inc);
         sprint ("\n");
-        
+
         // 2-5
         plusassign = a;
         sprint ("before plus \n");
@@ -55,13 +55,15 @@
         sprint ("before plus 3\n");
         iprint (plusassign);
         sprint ("\n");
-        
+
         // 2-6
+        sprint ("Will do while loop\n");
         a = 0;
         do {
                 inc = a++;
+                sprint ("In the do while loop\n");
                 sprint ("incremented\n");
                 iprint (a);
                 sprint ("\n");
-        } while (a < 5);
+        } while (a < 0);
 }
